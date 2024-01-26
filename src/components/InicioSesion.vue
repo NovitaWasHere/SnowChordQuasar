@@ -134,7 +134,7 @@
                 </div>
                 <h5>
                   <p>No tienes cuenta?</p>
-                  <q-btn flat>
+                  <q-btn flat to="/register">
                     <p class="q-pt-md" style="color: blue">Registrate aquí</p>
                   </q-btn>
                 </h5>
