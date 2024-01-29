@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="flex flex-center my-fontAcme">
+  <div class="flex flex-center my-fontAcme q-mb-xl">
     <div
       class="bg-primary q-mt-xl"
       style="border: 10px solid black; width: 80%"

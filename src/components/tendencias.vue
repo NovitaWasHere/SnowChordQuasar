@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class="row flex q-mt-xl">
+  <div class="row flex q-mt-xl q-mb-xl">
     <div class="col flex flex-center my-fontAcme">
       <div
         class="bg-primary flex flex-center q-ml-xl"
