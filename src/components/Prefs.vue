@@ -110,7 +110,7 @@
       color="primary"
       rounded
       style="width: 100px; height: 100px; display: none"
-      to="/home"
+      to="/prefsGen"
       id="continuar"
       @click="habilitarDesplazamiento"
     >

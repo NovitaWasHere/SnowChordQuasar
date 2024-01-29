@@ -15,6 +15,11 @@ const routes = [
     children: [{ path: "", component: () => import("pages/Prefs.vue") }],
   },
   {
+    path: "/prefsGen",
+    component: () => import("layouts/PrefGen.vue"),
+    children: [{ path: "", component: () => import("pages/PrefGen.vue") }],
+  },
+  {
     path: "/home",
     component: () => import("layouts/Home.vue"),
     children: [{ path: "", component: () => import("pages/Home.vue") }],
