@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <q-layout view="hhh lpR fff" class="bg-dark">
+  <q-layout view="hhh lpR fff" class="fondoPref">
     <q-page-container>
       <router-view />
     </q-page-container>

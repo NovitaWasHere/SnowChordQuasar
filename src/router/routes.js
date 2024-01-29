@@ -10,6 +10,11 @@ const routes = [
     children: [{ path: "", component: () => import("pages/Register.vue") }],
   },
   {
+    path: "/prefs",
+    component: () => import("layouts/PrefUser.vue"),
+    children: [{ path: "", component: () => import("pages/Prefs.vue") }],
+  },
+  {
     path: "/home",
     component: () => import("layouts/Home.vue"),
     children: [{ path: "", component: () => import("pages/Home.vue") }],
@@ -23,11 +28,6 @@ const routes = [
     path: "/profile",
     component: () => import("layouts/Profile.vue"),
     children: [{ path: "", component: () => import("pages/Profile.vue") }],
-  },
-  {
-    path: "/prefs",
-    component: () => import("layouts/PrefUser.vue"),
-    children: [{ path: "", component: () => import("pages/Prefs.vue") }],
   },
 ];
 
