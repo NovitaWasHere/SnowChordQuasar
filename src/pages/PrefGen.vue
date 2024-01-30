@@ -3,5 +3,5 @@
   <PrefGen></PrefGen>
 </template>
 <script setup>
-import PrefGen from "src/layouts/PrefGen.vue";
+import PrefGen from "src/components/PrefGen.vue";
 </script>
