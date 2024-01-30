@@ -1,5 +1,27 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
+  <div v-if="loading" class="loading-screen bg-dark">
+    <!-- Puedes personalizar esta pantalla de carga según tus necesidades -->
+    <div class="col q-pa-md">
+      <div class="column items-center">
+        <div class="col">
+          <img src="~assets/Img/SnowiFeliz.png" alt="" />
+        </div>
+        <div class="col">
+          <h3 class="basicText">SnowChords</h3>
+        </div>
+        <div class="col">
+          <q-circular-progress
+            indeterminate
+            rounded
+            size="50px"
+            color="primary"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="bg-dark" style="width: 100%">
     <div>
       <div class="q-pa-md">
@@ -10,6 +32,7 @@
           ref="carousel"
           infinite
           thumbnails="true"
+          v-show="!loading"
         >
           <q-carousel-slide :name="1" img-src="~assets/Img/PianoCarousel.png">
             <div
@@ -102,4 +125,22 @@
 <script setup>
 import { ref } from "vue";
 const slide = ref(false);
+let loading = true;
+// Simula una carga de 5 segundos antes de mostrar el carousel
+setTimeout(() => {
+  loading = false;
+}, 100);
 </script>
+<style>
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Asegura que la pantalla de carga esté sobre el contenido */
+}
+</style>
