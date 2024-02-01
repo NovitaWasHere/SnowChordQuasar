@@ -34,7 +34,7 @@ let show = true;
 
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "auto";
     document.getElementById("logo").style.display = "block";
     timer = setTimeout(() => {
       unShowLoading();
@@ -43,7 +43,7 @@ document.onreadystatechange = function () {
   }
 };
 function unShowLoading() {
-  document.body.style.overflow = "auto";
+  document.body.style.overflow = "hidden";
   document.getElementById("logo").style.display = "none";
   show = true;
 }

@@ -72,7 +72,7 @@
         <q-menu class="border">
           <div class="row no-wrap q-pa-md">
             <div class="column">
-              <div class="text-h6 q-mb-md">Settings</div>
+              <div class="text-h6 text-center q-mb-md">Settings</div>
               <q-btn flat>
                 <q-avatar>
                   <img src="~assets/Img/LogoSnow.png" />
@@ -87,7 +87,7 @@
             <q-separator vertical inset class="q-mx-lg" />
             <div class="column items-center">
               <q-avatar size="72px">
-                <img src="https://cdn.quasar.dev/img/avatar4.jpg" />
+                <img src="~assets/Img/LogoSnow.png" />
               </q-avatar>
 
               <div class="text-subtitle1 q-mt-md q-mb-xs">Nombre</div>
@@ -98,6 +98,7 @@
                 push
                 size="sm"
                 v-close-popup
+                to="/"
               />
             </div>
           </div>

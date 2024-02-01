@@ -5,6 +5,21 @@ const routes = [
     children: [{ path: "", component: () => import("pages/index.vue") }],
   },
   {
+    path: "/politics",
+    component: () => import("layouts/Politics.vue"),
+    children: [{ path: "", component: () => import("pages/Politics.vue") }],
+  },
+  {
+    path: "/recMusic",
+    component: () => import("layouts/RecMusic.vue"),
+    children: [{ path: "", component: () => import("pages/RecMusic.vue") }],
+  },
+  {
+    path: "/librery",
+    component: () => import("layouts/Biblioteca.vue"),
+    children: [{ path: "", component: () => import("pages/Biblioteca.vue") }],
+  },
+  {
     path: "/register",
     component: () => import("layouts/Register.vue"),
     children: [{ path: "", component: () => import("pages/Register.vue") }],

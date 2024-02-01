@@ -79,8 +79,8 @@
     <div class="my-fontAcme row q-pa-xl bg-accent" style="color: white">
       <div style="width: 100%" class="bg-dark">
         <h2 class="text-center">Ahora estas listo para empezar?</h2>
-        <div class="col flex justify-center centers">
-          <q-btn color="primary" icon="check" label="Ir ahora" />
+        <div class="col flex justify-center centers q-pb-xl">
+          <q-btn color="primary" icon="check" label="Ir ahora" to="/register" />
         </div>
       </div>
     </div>
