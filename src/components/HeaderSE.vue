@@ -55,9 +55,10 @@
         </div>
       </q-btn>
       <q-btn
-        color="positive"
+        color="accent"
         @click="iniciarSesion = true"
-        class="row inline float-right on-left"
+        class="row"
+        style="width: 300px"
       >
         <div class="center q-pr-md">
           <q-btn round>
@@ -69,37 +70,39 @@
         <div>
           <p class="basicText q-mt-md">Nombre del Usuario</p>
         </div>
-        <q-menu class="border">
-          <div class="row no-wrap q-pa-md">
-            <div class="column">
-              <div class="text-h6 text-center q-mb-md">Settings</div>
-              <q-btn flat>
-                <q-avatar>
+        <q-menu anchor="bottom start" self="top left" style="width: 300px">
+          <div class="flex flex-center">
+            <div class="row no-wrap q-pa-md">
+              <div class="column">
+                <div class="text-h6 text-center q-mb-md">Settings</div>
+                <q-btn flat class="bg-accent flex flex-center">
+                  <p class="text-justify text-white q-pt-sm">
+                    Inventario
+                  </p></q-btn
+                >
+                <q-btn flat class="bg-accent flex flex-center q-mt-sm">
+                  <p class="text-justify text-white q-pt-sm">
+                    Inventario
+                  </p></q-btn
+                >
+              </div>
+              <q-separator vertical inset class="q-mx-lg" />
+              <div class="column items-center">
+                <q-avatar size="72px">
                   <img src="~assets/Img/LogoSnow.png" />
                 </q-avatar>
-              </q-btn>
-              <q-btn flat>
-                <q-avatar>
-                  <img src="~assets/Img/LogoSnow.png" />
-                </q-avatar>
-              </q-btn>
-            </div>
-            <q-separator vertical inset class="q-mx-lg" />
-            <div class="column items-center">
-              <q-avatar size="72px">
-                <img src="~assets/Img/LogoSnow.png" />
-              </q-avatar>
 
-              <div class="text-subtitle1 q-mt-md q-mb-xs">Nombre</div>
+                <div class="text-subtitle1 q-mt-md q-mb-xs">Nombre</div>
 
-              <q-btn
-                color="accent"
-                label="Logout"
-                push
-                size="sm"
-                v-close-popup
-                to="/"
-              />
+                <q-btn
+                  color="accent"
+                  label="Logout"
+                  push
+                  size="sm"
+                  v-close-popup
+                  to="/"
+                />
+              </div>
             </div>
           </div>
         </q-menu>

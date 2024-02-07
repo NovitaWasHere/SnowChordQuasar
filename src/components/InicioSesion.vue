@@ -1,13 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <!-- Template es el equivalente a HTML para la utilizacion de etiquetas HTML -->
 <template>
-  <q-dialog
-    v-model="model"
-    class="shadow-8 radius"
-    full-height
-    full-width
-    @hide="inicioSesion"
-  >
+  <q-dialog v-model="model" class="shadow-8 radius" full-height full-width>
     <q-card class="shadow-8 bg-secondary radius" round>
       <div
         class="shadow-8 bg-secondary radius absolute-center"
@@ -148,16 +142,9 @@
 </template>
 <script setup>
 import { ref, defineModel } from "vue";
-const props = defineProps({
-  modelValue: Boolean,
-});
+
 const model = defineModel();
 const nombre = ref("");
 const contra = ref("");
 const shape = ref(false);
-const iniciarSesion = ref(false);
-
-function inicioSesion() {
-  iniciarSesion.value = false;
-}
 </script>

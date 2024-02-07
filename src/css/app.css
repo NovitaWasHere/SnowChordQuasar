@@ -23,6 +23,15 @@
   /* Agrega un borde sólido de 1 píxel y un color gris (#ccc) a los bloques */
   border: 1px solid #000000;
 }
+.easy {
+  background-color: #78d96b;
+}
+.medium {
+  background-color: #baba53;
+}
+.hard {
+  background-color: #d23d3d;
+}
 .radius {
   border-radius: 70px 70px 70px 70px;
 }
