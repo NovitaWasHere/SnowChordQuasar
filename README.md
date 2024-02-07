@@ -1,4 +1,4 @@
-# Quasar App (quasar-project)
+# SnowChord
 
 A Quasar Project
 
