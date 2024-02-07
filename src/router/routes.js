@@ -49,6 +49,11 @@ const routes = [
     component: () => import("layouts/Profile.vue"),
     children: [{ path: "", component: () => import("pages/Profile.vue") }],
   },
+  {
+    path: "/shop",
+    component: () => import("layouts/Shop.vue"),
+    children: [{ path: "", component: () => import("pages/Shop.vue") }],
+  },
 ];
 
 export default routes;

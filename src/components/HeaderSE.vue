@@ -22,7 +22,7 @@
           </q-row>
         </q-btn>
       </q-toolbar-title>
-      <q-btn style="height: 60px" flat>
+      <q-btn style="height: 60px" flat to="/shop">
         <q-tooltip> Copos </q-tooltip>
         <div class="center">
           <q-avatar size="50px">
