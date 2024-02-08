@@ -60,6 +60,7 @@
                 color="black"
                 class="full-width"
                 label="Escala Cromatica I"
+                to="/theory"
               />
             </div>
             <div class="q-pa-md">
@@ -67,6 +68,7 @@
                 color="black"
                 class="full-width"
                 label="Escala Cromatica II"
+                to="/theory"
               />
             </div>
             <div class="q-pa-md">
@@ -74,6 +76,7 @@
                 color="black"
                 class="full-width"
                 label="Escala Cromatica III"
+                to="/theory"
               />
             </div>
             <div class="q-pa-md">
@@ -81,6 +84,7 @@
                 color="black"
                 class="full-width"
                 label="Escala Cromatica IV"
+                to="/theory"
               />
             </div>
             <div class="q-pa-md">
@@ -88,6 +92,7 @@
                 color="black"
                 class="full-width"
                 label="Lectura de Partituras I"
+                to="/theory"
               />
             </div>
             <div class="q-pa-md">
@@ -95,6 +100,7 @@
                 color="black"
                 class="full-width"
                 label="Lectura de Partituras II"
+                to="/theory"
               />
             </div>
             <div class="q-pa-md">
@@ -102,6 +108,7 @@
                 color="black"
                 class="full-width"
                 label="Lectura de Partituras III"
+                to="/theory"
               />
             </div>
           </div>
