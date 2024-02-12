@@ -8,7 +8,7 @@
     >
       <q-btn push label="Inicio" icon="home" to="/home" />
       <q-btn push label="Canciones" icon="library_music" to="/songs" />
-      <q-btn push label="Perfil" icon="ac_unit" to="/profile" />
+      <q-btn push label="Estadisticas" icon="ac_unit" to="/profile" />
     </q-btn-group>
   </div>
 </template>

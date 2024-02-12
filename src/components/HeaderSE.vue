@@ -73,16 +73,24 @@
         <q-menu anchor="bottom start" self="top left" style="width: 300px">
           <div class="flex flex-center">
             <div class="row no-wrap q-pa-md">
-              <div class="column">
+              <div class="column flex flex-center">
                 <div class="text-h6 text-center q-mb-md">Settings</div>
-                <q-btn flat class="bg-accent flex flex-center">
-                  <p class="text-justify text-white q-pt-sm">
-                    Inventario
-                  </p></q-btn
+                <q-btn
+                  flat
+                  class="bg-accent flex flex-center"
+                  style="width: 90%"
+                  @click="usuario = true"
                 >
-                <q-btn flat class="bg-accent flex flex-center q-mt-sm">
+                  <p class="text-justify text-white q-pt-sm">Perfil</p></q-btn
+                >
+                <q-btn
+                  flat
+                  class="bg-accent flex flex-center q-mt-sm"
+                  style="width: 90%"
+                  @click="ConfiguracionUser = true"
+                >
                   <p class="text-justify text-white q-pt-sm">
-                    Inventario
+                    Configuracion
                   </p></q-btn
                 >
               </div>
@@ -109,11 +117,14 @@
       </q-btn>
     </q-toolbar>
   </q-header>
-  <InicioSesion v-model="iniciarSesion"></InicioSesion>
+  <CardItemUsuario v-model="usuario"></CardItemUsuario>
+  <CardItemConfiguracion v-model="ConfiguracionUser"></CardItemConfiguracion>
 </template>
 <script setup>
 import { ref } from "vue";
+import CardItemUsuario from "./CardItemUsuario.vue";
+import CardItemConfiguracion from "./CardItemConfiguracion.vue";
 
-const mobileData = ref(false);
-const bluetooth = ref(false);
+const usuario = ref(false);
+const ConfiguracionUser = ref(false);
 </script>
