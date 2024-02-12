@@ -86,7 +86,7 @@
                     >
                       <div class="col q-pa-md">Tiempo</div>
                       <div class="col q-pa-md">Dificultad</div>
-                      <div class="col q-pa-md">Estado</div>
+                      <div class="col q-pa-md">Genero</div>
                     </div>
                   </div>
                   <div
@@ -101,7 +101,7 @@
                   >
                     <div class="col q-pa-md">3:40</div>
                     <div class="col q-pa-md">Facil</div>
-                    <div class="col q-pa-md">Nuevo</div>
+                    <div class="col q-pa-md">Pop</div>
                   </div>
                 </div>
               </div>
