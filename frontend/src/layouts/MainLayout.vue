@@ -35,7 +35,6 @@ export default {
       headerComponent = ref(user ? 'HeaderSE' : 'HeaderS');
       let accessData = object.value.datos
 
-      console.log(object.value.datos.admin)
       if(accessData.admin){
         headerComponent.value = "HeaderSEA"
       }

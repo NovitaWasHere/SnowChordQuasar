@@ -79,15 +79,15 @@
       >
         <div class="center q-pr-md">
           <q-btn round>
-            <q-avatar size="50px">
-              <img src="~assets/Img/LogoSnow.png"/>
+            <q-avatar size="60px">
+              <img :src="snowi.imgIcono" alt="" style="width: 120px"/>
             </q-avatar>
           </q-btn>
         </div>
         <div>
           <p class="basicText q-mt-md" >{{object.datos.nombre}}</p>
         </div>
-        <q-menu anchor="bottom start" self="top left" style="width: 300px">
+        <q-menu  anchor="bottom start" self="top left" style="width: 300px">
           <div class="flex flex-center">
             <div class="row no-wrap q-pa-md">
               <div class="column flex flex-center">
@@ -95,33 +95,25 @@
                 <q-btn
                   flat
                   class="bg-accent flex flex-center"
-                  style="width: 90%"
+                  style="width: 100%"
                   @click="usuario = true"
                 >
                   <p class="text-justify text-white q-pt-sm">Perfil</p></q-btn
-                >
-                <q-btn
-                  flat
-                  class="bg-accent flex flex-center q-mt-sm"
-                  style="width: 90%"
-                  @click="ConfiguracionUser = true"
-                >
-                  <p class="text-justify text-white q-pt-sm">
-                    Configuracion
-                  </p></q-btn
                 >
               </div>
               <q-separator vertical inset class="q-mx-lg"/>
               <div class="column items-center">
                 <q-avatar size="72px">
-                  <img src="~assets/Img/LogoSnow.png"/>
+                  <q-avatar size="60px">
+                    <img :src="snowi.imgIcono" alt="" style="width: 120px"/>
+                  </q-avatar>
                 </q-avatar>
 
-                <div class="text-subtitle1 q-mt-md q-mb-xs">Nombre</div>
+                <div class="text-subtitle1 q-mt-md q-mb-xs">{{object.datos.nombre}}</div>
 
                 <q-btn
                   color="accent"
-                  label="Logout"
+                  label="Salir"
                   push
                   size="sm"
                   v-close-popup
@@ -134,24 +126,56 @@
       </q-btn>
     </q-toolbar>
   </q-header>
-  <CardItemUsuario v-model="usuario"></CardItemUsuario>
-  <CardItemConfiguracion v-model="ConfiguracionUser"></CardItemConfiguracion>
+  <CardItemUsuario v-model="usuario" :object="snowi"></CardItemUsuario>
+  <!--<CardItemConfiguracion v-model="ConfiguracionUser"></CardItemConfiguracion>
+  <q-btn
+    flat
+    class="bg-accent flex flex-center q-mt-sm"
+    style="width: 90%"
+    @click="ConfiguracionUser = true"
+  >
+    <p class="text-justify text-white q-pt-sm">
+      Configuracion
+    </p></q-btn
+  >-->
 </template>
 <script setup>
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
 import CardItemUsuario from "./CardItemUsuario.vue";
 import CardItemConfiguracion from "./CardItemConfiguracion.vue";
-
+import api from "boot/httpSingleton";
+const api_ = api
 const usuario = ref(false);
-const ConfiguracionUser = ref(false);
+const snowi = ref({})
 
 const localStorage = window.localStorage;
 const user = localStorage.getItem("usuario");
 const object = ref(JSON.parse(localStorage.getItem("usuario")))
-console.log(object.value.datos.nombre)
+
 function cerrarSesion() {
   localStorage.clear()
   window.location.reload()
   window.location.href = "/#/";
 }
+window.onload = function(){
+  conseguirSnowi()
+}
+
+onMounted(conseguirSnowi);
+async function conseguirSnowi() {
+  await fetch(`${api_}//mascotas/esp/${object.value.datos.snowiSelected}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then((res) => res.json())
+    .then((datos) => {
+      if (!datos.exito === false) {
+
+        snowi.value = datos.datos
+      }
+    });
+}
+
 </script>

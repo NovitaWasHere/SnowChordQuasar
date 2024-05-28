@@ -1,5 +1,5 @@
 <template>
-  <q-dialog v-model="toolbar" full-height full-width persistent>
+  <q-dialog full-height full-width persistent v-if="loaded">
     <q-card class="bg-primary" style="overflow-y: hidden; overflow-x: hidden">
       <div>
         <!--Titulo-->
@@ -62,6 +62,9 @@
                 <div class="row text-justify text-h4 text-white my-fontAcme">
                   <div
                     class="column easy"
+                    :style="{
+                        backgroundColor: song.dificultad === 1 ? '#62e573' : song.dificultad === 2 ? '#dcb367' : 'red',
+                    }"
                     style="width: 50%; border-bottom: 10px solid black"
                   >
                     <div
@@ -103,8 +106,8 @@
         <div
           style="
             z-index: 2000;
-            bottom: 450px;
-            left: 1100px;
+            bottom: 350px;
+            left: 1250px;
             position: relative;
             width: 250px;
           "
@@ -112,8 +115,8 @@
         >
           <p>{{ song.instrumento === 1 ? "Guitarra": "Piano" }}</p>
           <img
-            v-if="song.instrumento === 1"
-            src="~assets/Img/SnowiGuitar.png"
+            v-if=" loaded && song.instrumento === 1 && snowiI"
+            :src="snowiI"
             alt="Guitarra"
             class="radius"
             style="width: 100%"
@@ -126,12 +129,10 @@
             style="width: 100%"
           />
         </div>
-
         <q-btn
           class="absolute-bottom-right bg-accent text-white my-fontAcme"
           flat
           dense
-          v-close-popup
           size="20px"
           style="
             width: 15%;
@@ -140,6 +141,7 @@
             border-radius: 45px 0px 0px 0px;
             border: 5px solid black;
           "
+          @click="actUser(song.lyrics,song._id)"
         >
           Jugar
         </q-btn>
@@ -148,10 +150,52 @@
   </q-dialog>
 </template>
 <script setup>
-import {ref, defineProps} from "vue";
-
+import {ref, defineProps, onMounted} from "vue";
+import {useRouter} from "vue-router";
+import api from "src/boot/httpSingleton";
+const api_ = api
+const router = useRouter()
+const localStorage = window.localStorage
+const user = JSON.parse(localStorage.getItem("usuario")).datos
 const props = defineProps({
   song: Object
 });
+const snowi = ref({})
+const snowiI = ref('')
+const loaded = ref(false)
 
+async function actUser(id,idCancion){
+  await fetch(`${api_}/usuarios/actStudent/${user.id}`,{
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body:JSON.stringify({
+      "reproducidas":[idCancion],
+      "juegos": user.juegos + 1
+    })
+  }).then((res) => res.json())
+    .then((datos) => {
+      console.log(datos)
+      router.push('/play/' + btoa(id))
+    })
+}
+
+onMounted(conseguirSnowi);
+async function conseguirSnowi() {
+  await fetch(`${api_}//mascotas/esp/${user.snowiSelected}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then((res) => res.json())
+    .then((datos) => {
+      if (!datos.exito === false) {
+        snowi.value = datos.datos
+        loaded.value = true
+        snowiI.value = snowi.value.imgSnowi
+      }
+    });
+}
 </script>

@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div class=" border flex flex-center q-pa-md">
+  <div class="flex flex-center q-pa-md">
     <div class="q-gutter-y-md" style="width: 90%">
       <q-card>
         <q-tabs
@@ -14,7 +14,7 @@
         >
           <q-tab name="Usuarios" label="Usuarios" @click="conseguirUsers"/>
           <q-tab name="Canciones" label="Canciones" @click="conseguirSongs"/>
-          <q-tab name="Cursos" label="Cursos"/>
+          <q-tab name="Cursos" label="Cursos" @click="conseguirCursos"/>
         </q-tabs>
 
         <q-separator/>
@@ -36,7 +36,7 @@
                   :key="x._id"
              >
                <div class="row  q-pa-md">
-                 <q-btn round color="primary" icon="edit"  class="q-mr-lg"/>
+                 <q-btn round color="primary" icon="edit"  class="q-mr-lg" @click="edit(x)"/>
                  <p class="col q-ml-xl q-pl-xl">{{x.nombre}}</p>
                  <p class="col ">{{formatearFecha(x.creacionUser)}}</p>
                  <p class="col">{{x.admin}}</p>
@@ -67,7 +67,7 @@
                    :key="x._id"
               >
                 <div class="row text-center  q-pa-md">
-                  <q-btn round color="primary" icon="edit"/>
+                  <q-btn round color="primary" icon="edit"  @click="edit(x)"/>
                   <p class="col">{{x.nombre}}</p>
                   <p class="col">{{x.instrumento}}</p>
                   <p class="col">{{x.tiempo}}</p>
@@ -79,26 +79,60 @@
           </q-tab-panel>
 
           <q-tab-panel name="Cursos">
-            <div class="text-h6">Movies</div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <div class="q-pa-md">
+              <div class="text-h4 text-center my-fontAcme q-pa-md">Cursos</div>
+              <div class="row ">
+                <p class="col text-justify text-weight-bolder q-pt-md q-pa-sm">Accion</p>
+                <div class="col-11 q-pl-xl">
+                  <div class="row  q-pt-md q-pa-sm">
+                    <p class="col text-weight-bolder">Nombre Practica</p>
+                    <p class="col text-weight-bolder">Nombre Guia</p>
+                    <p class="col text-weight-bolder" style="position: relative;z-index: 1;left: 30px">Parte</p>
+                    <p class="col text-weight-bolder" style="position: relative;z-index: 1;left: 40px" >Orientacion</p>
+                  </div>
+                </div>
+              </div>
+              <div v-for="x in cursos"
+                   :key="x._id"
+              >
+                <div class="row text-center  q-pa-md">
+                  <q-btn round color="primary" icon="edit"  @click="edit(x)"/>
+                  <p class="col">{{x.nombrePractica}}</p>
+                  <p class="col">{{x.nombreGuia}}</p>
+                  <p class="col">{{x.parte}}</p>
+                  <p class="col ">{{x.orientacion}}</p>
+                </div>
+              </div>
+            </div>
           </q-tab-panel>
         </q-tab-panels>
       </q-card>
     </div>
   </div>
+  <EditOb  v-model="previewGame" :song="obElegida"></EditOb>
 </template>
 <script setup>
 import {useQuasar} from "quasar";
 import {useRouter} from "vue-router";
 import api from "src/boot/httpSingleton";
 import {ref} from "vue";
+import EditOb from "components/EditOb.vue";
+import PreviewGame from "components/PreviewGame.vue";
 
 const tab = ref(`data`)
 const $q = useQuasar();
 const router = useRouter();
 const api_ = api
+const previewGame = ref(false);
+const obElegida = ref(null);
 const usuarios = ref([]);
 const canciones = ref([]);
+const cursos = ref([]);
+
+function  edit(id){
+  previewGame.value = true
+  obElegida.value = id
+}
 
 const formatearFecha = (fechaISO) => {
   // Eliminar los últimos 12 caracteres de la fecha ISO
@@ -129,6 +163,27 @@ async function conseguirUsers() {
           color: "negative",
           timeout: 1000,
         });
+      }
+    });
+}
+async function conseguirCursos() {
+  await fetch(`${api_}/cursos/all`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then((res) => res.json())
+    .then((datos) => {
+      console.log(datos);
+      if (!datos.exito === false) {
+
+        cursos.value = []
+
+        datos.datos.forEach(objeto => {
+          cursos.value.push(objeto);
+        });
+
       }
     });
 }
@@ -170,7 +225,6 @@ async function conseguirCourse() {
     .then((datos) => {
       console.log(datos);
       if (!datos.exito === false) {
-
         datos.datos.forEach(objeto => {
           usuarios.value.push(objeto);
         });

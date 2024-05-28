@@ -145,9 +145,6 @@ async function iniciarSesion() {
     })
       .then((res) => res.json())
       .then((datos) => {
-        console.log(datos);
-        let datoss = ref(JSON.stringify(datos))
-        console.log(datoss.value)
         if (!datos.exito === false)  {
           $q.notify({
             progress: true,

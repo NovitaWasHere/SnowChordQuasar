@@ -26,266 +26,22 @@
               </h2>
             </div>
           </div>
-          <q-btn
-            class="bg-white border radius q-mt-xl"
-            style="border: 4px solid #136066"
-            flat
-          >
-            <div class="row">
-              <div class="col">
-                <div>
-                  <div
-                    style="
-                      width: 50%;
-                      position: relative;
-                      z-index: 1;
-                      top: 50px;
-                      background-color: #dcb367;
-                      color: white;
-                      border: 3px solid black;
-                    "
-                  >
-                    Intermedio
-                  </div>
-                  <img
-                    src="~assets/Img/phoenix.png"
-                    alt=""
-                    class="q-ma-xs"
-                    style="border: 4px solid #136066; width: 100%"
-                  />
-                </div>
-                <div class="text-justify q-pa-xs" style="word-break: break-all">
-                  <p class="q-pl-md text-h5 text-weight-bolder">Phoenix</p>
-                  <p class="q-pl-md text-h6">
-                    <strong>League of legends</strong>
-                  </p>
-                  <p class="q-pl-md text-subtitle1" style="color: #136066">
-                    <q-icon name="shutter_speed" /><strong
-                      class="q-pl-xs q-pt-xl"
-                      style="position: relative; top: 3px"
-                    >
-                      3:22</strong
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="col-5 q-pa-xl">
-                <p class="text-center q-pl-lg text-weight-bolder text-h5">
-                  Piano
-                </p>
-                <img
-                  src="~assets/Img/SnowiPiano.png"
-                  alt=""
-                  class="radius q-ml-md"
-                  style="width: 100%"
-                />
-              </div>
-            </div>
-            <q-slider
-              v-model="model"
-              :min="0"
-              :max="10"
-              color="accent"
-              track-size="21px"
-              readonly
-              style="width: 95%"
-            />
-          </q-btn>
-          <q-btn
-            class="bg-white border radius q-mt-xl"
-            style="border: 4px solid #136066"
-            flat
-          >
-            <div class="row">
-              <div class="col">
-                <div>
-                  <div
-                    style="
-                      width: 50%;
-                      position: relative;
-                      z-index: 1;
-                      top: 50px;
-                      background-color: #dcb367;
-                      color: white;
-                      border: 3px solid black;
-                    "
-                  >
-                    Intermedio
-                  </div>
-                  <img
-                    src="~assets/Img/phoenix.png"
-                    alt=""
-                    class="q-ma-xs"
-                    style="border: 4px solid #136066; width: 100%"
-                  />
-                </div>
-                <div class="text-justify q-pa-xs" style="word-break: break-all">
-                  <p class="q-pl-md text-h5 text-weight-bolder">Phoenix</p>
-                  <p class="q-pl-md text-h6">
-                    <strong>League of legends</strong>
-                  </p>
-                  <p class="q-pl-md text-subtitle1" style="color: #136066">
-                    <q-icon name="shutter_speed" /><strong
-                      class="q-pl-xs q-pt-xl"
-                      style="position: relative; top: 3px"
-                    >
-                      3:22</strong
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="col-5 q-pa-xl">
-                <p class="text-center q-pl-lg text-weight-bolder text-h5">
-                  Piano
-                </p>
-                <img
-                  src="~assets/Img/SnowiPiano.png"
-                  alt=""
-                  class="radius q-ml-md"
-                  style="width: 100%"
-                />
-              </div>
-            </div>
-            <q-slider
-              v-model="model"
-              :min="0"
-              :max="10"
-              color="accent"
-              track-size="21px"
-              readonly
-              style="width: 95%"
-            />
-          </q-btn>
-          <q-btn
-            class="bg-white border radius q-mt-xl"
-            style="border: 4px solid #136066"
-            flat
-          >
-            <div class="row">
-              <div class="col">
-                <div>
-                  <div
-                    style="
-                      width: 50%;
-                      position: relative;
-                      z-index: 1;
-                      top: 50px;
-                      background-color: #dcb367;
-                      color: white;
-                      border: 3px solid black;
-                    "
-                  >
-                    Intermedio
-                  </div>
-                  <img
-                    src="~assets/Img/phoenix.png"
-                    alt=""
-                    class="q-ma-xs"
-                    style="border: 4px solid #136066; width: 100%"
-                  />
-                </div>
-                <div class="text-justify q-pa-xs" style="word-break: break-all">
-                  <p class="q-pl-md text-h5 text-weight-bolder">Phoenix</p>
-                  <p class="q-pl-md text-h6">
-                    <strong>League of legends</strong>
-                  </p>
-                  <p class="q-pl-md text-subtitle1" style="color: #136066">
-                    <q-icon name="shutter_speed" /><strong
-                      class="q-pl-xs q-pt-xl"
-                      style="position: relative; top: 3px"
-                    >
-                      3:22</strong
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="col-5 q-pa-xl">
-                <p class="text-center q-pl-lg text-weight-bolder text-h5">
-                  Piano
-                </p>
-                <img
-                  src="~assets/Img/SnowiPiano.png"
-                  alt=""
-                  class="radius q-ml-md"
-                  style="width: 100%"
-                />
-              </div>
-            </div>
-            <q-slider
-              v-model="model"
-              :min="0"
-              :max="10"
-              color="accent"
-              track-size="21px"
-              readonly
-              style="width: 95%"
-            />
-          </q-btn>
-          <q-btn
-            class="bg-white border radius q-mt-xl"
-            style="border: 4px solid #136066"
-            flat
-          >
-            <div class="row">
-              <div class="col">
-                <div>
-                  <div
-                    style="
-                      width: 50%;
-                      position: relative;
-                      z-index: 1;
-                      top: 50px;
-                      background-color: #dcb367;
-                      color: white;
-                      border: 3px solid black;
-                    "
-                  >
-                    Intermedio
-                  </div>
-                  <img
-                    src="~assets/Img/phoenix.png"
-                    alt=""
-                    class="q-ma-xs"
-                    style="border: 4px solid #136066; width: 100%"
-                  />
-                </div>
-                <div class="text-justify q-pa-xs" style="word-break: break-all">
-                  <p class="q-pl-md text-h5 text-weight-bolder">Phoenix</p>
-                  <p class="q-pl-md text-h6">
-                    <strong>League of legends</strong>
-                  </p>
-                  <p class="q-pl-md text-subtitle1" style="color: #136066">
-                    <q-icon name="shutter_speed" /><strong
-                      class="q-pl-xs q-pt-xl"
-                      style="position: relative; top: 3px"
-                    >
-                      3:22</strong
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="col-5 q-pa-xl">
-                <p class="text-center q-pl-lg text-weight-bolder text-h5">
-                  Piano
-                </p>
-                <img
-                  src="~assets/Img/SnowiPiano.png"
-                  alt=""
-                  class="radius q-ml-md"
-                  style="width: 100%"
-                />
-              </div>
-            </div>
-            <q-slider
-              v-model="model"
-              :min="0"
-              :max="10"
-              color="accent"
-              track-size="21px"
-              readonly
-              style="width: 95%"
-            />
-          </q-btn>
+          <div>
+            <CardLevel
+              v-for="n in cancionesGuitar"
+              :key="n"
+              :id="n._id"
+              :artista="n.artista"
+              :dificultad="n.dificultad"
+              :genero="n.genero"
+              :img-cancion="n.imgCancion"
+              :instrumento="n.instrumento"
+              :nombre="n.nombre"
+              :tiempo="n.tiempo"
+              :img-snowi="snowiI"
+              @click="elegida(n)"
+            ></CardLevel>
+          </div>
         </div>
         <div
           class="bg-white col q-pa-xl"
@@ -309,335 +65,96 @@
                 Piano
               </h2>
             </div>
+            <div>
+              <CardLevel
+                v-for="n in cancionesPiano"
+                :key="n"
+                :id="n._id"
+                :artista="n.artista"
+                :dificultad="n.dificultad"
+                :genero="n.genero"
+                :img-cancion="n.imgCancion"
+                :instrumento="n.instrumento"
+                :nombre="n.nombre"
+                :tiempo="n.tiempo"
+                :img-snowi="snowiI"
+                @click="elegida(n)"
+              ></CardLevel>
+            </div>
           </div>
-          <q-btn
-            class="bg-white radius q-mt-xl"
-            style="border: 4px solid #136066"
-            flat
-          >
-            <div class="row">
-              <div class="col">
-                <div>
-                  <div
-                    style="
-                      width: 50%;
-                      position: relative;
-                      z-index: 1;
-                      top: 50px;
-                      background-color: #dcb367;
-                      color: white;
-                      border: 3px solid black;
-                    "
-                  >
-                    Intermedio
-                  </div>
-                  <img
-                    src="~assets/Img/phoenix.png"
-                    alt=""
-                    class="q-ma-xs"
-                    style="border: 4px solid #136066; width: 100%"
-                  />
-                </div>
-                <div class="text-justify q-pa-xs" style="word-break: break-all">
-                  <p class="q-pl-md text-h5 text-weight-bolder">Phoenix</p>
-                  <p class="q-pl-md text-h6">
-                    <strong>League of legends</strong>
-                  </p>
-                  <p class="q-pl-md text-subtitle1" style="color: #136066">
-                    <q-icon name="shutter_speed" /><strong
-                      class="q-pl-xs q-pt-xl"
-                      style="position: relative; top: 3px"
-                    >
-                      3:22</strong
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="col-5 q-pa-xl">
-                <p class="text-center q-pl-lg text-weight-bolder text-h5">
-                  Piano
-                </p>
-                <img
-                  src="~assets/Img/SnowiPiano.png"
-                  alt=""
-                  class="radius q-ml-md"
-                  style="width: 100%"
-                />
-              </div>
-            </div>
-            <q-slider
-              v-model="model"
-              :min="0"
-              :max="10"
-              color="accent"
-              track-size="21px"
-              readonly
-              style="width: 95%"
-            />
-          </q-btn>
-          <q-btn
-            class="bg-white border radius q-mt-xl"
-            style="border: 4px solid #136066"
-            flat
-          >
-            <div class="row">
-              <div class="col">
-                <div>
-                  <div
-                    style="
-                      width: 50%;
-                      position: relative;
-                      z-index: 1;
-                      top: 50px;
-                      background-color: #dcb367;
-                      color: white;
-                      border: 3px solid black;
-                    "
-                  >
-                    Intermedio
-                  </div>
-                  <img
-                    src="~assets/Img/phoenix.png"
-                    alt=""
-                    class="q-ma-xs"
-                    style="border: 4px solid #136066; width: 100%"
-                  />
-                </div>
-                <div class="text-justify q-pa-xs" style="word-break: break-all">
-                  <p class="q-pl-md text-h5 text-weight-bolder">Phoenix</p>
-                  <p class="q-pl-md text-h6">
-                    <strong>League of legends</strong>
-                  </p>
-                  <p class="q-pl-md text-subtitle1" style="color: #136066">
-                    <q-icon name="shutter_speed" /><strong
-                      class="q-pl-xs q-pt-xl"
-                      style="position: relative; top: 3px"
-                    >
-                      3:22</strong
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="col-5 q-pa-xl">
-                <p class="text-center q-pl-lg text-weight-bolder text-h5">
-                  Piano
-                </p>
-                <img
-                  src="~assets/Img/SnowiPiano.png"
-                  alt=""
-                  class="radius q-ml-md"
-                  style="width: 100%"
-                />
-              </div>
-            </div>
-            <q-slider
-              v-model="model"
-              :min="0"
-              :max="10"
-              color="accent"
-              track-size="21px"
-              readonly
-              style="width: 95%"
-            />
-          </q-btn>
-          <q-btn
-            class="bg-white border radius q-mt-xl"
-            style="border: 4px solid #136066"
-            flat
-          >
-            <div class="row">
-              <div class="col">
-                <div>
-                  <div
-                    style="
-                      width: 50%;
-                      position: relative;
-                      z-index: 1;
-                      top: 50px;
-                      background-color: #dcb367;
-                      color: white;
-                      border: 3px solid black;
-                    "
-                  >
-                    Intermedio
-                  </div>
-                  <img
-                    src="~assets/Img/phoenix.png"
-                    alt=""
-                    class="q-ma-xs"
-                    style="border: 4px solid #136066; width: 100%"
-                  />
-                </div>
-                <div class="text-justify q-pa-xs" style="word-break: break-all">
-                  <p class="q-pl-md text-h5 text-weight-bolder">Phoenix</p>
-                  <p class="q-pl-md text-h6">
-                    <strong>League of legends</strong>
-                  </p>
-                  <p class="q-pl-md text-subtitle1" style="color: #136066">
-                    <q-icon name="shutter_speed" /><strong
-                      class="q-pl-xs q-pt-xl"
-                      style="position: relative; top: 3px"
-                    >
-                      3:22</strong
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="col-5 q-pa-xl">
-                <p class="text-center q-pl-lg text-weight-bolder text-h5">
-                  Piano
-                </p>
-                <img
-                  src="~assets/Img/SnowiPiano.png"
-                  alt=""
-                  class="radius q-ml-md"
-                  style="width: 100%"
-                />
-              </div>
-            </div>
-            <q-slider
-              v-model="model"
-              :min="0"
-              :max="10"
-              color="accent"
-              track-size="21px"
-              readonly
-              style="width: 95%"
-            />
-          </q-btn>
-          <q-btn
-            class="bg-white border radius q-mt-xl"
-            style="border: 4px solid #136066"
-            flat
-          >
-            <div class="row">
-              <div class="col">
-                <div>
-                  <div
-                    style="
-                      width: 50%;
-                      position: relative;
-                      z-index: 1;
-                      top: 50px;
-                      background-color: #dcb367;
-                      color: white;
-                      border: 3px solid black;
-                    "
-                  >
-                    Intermedio
-                  </div>
-                  <img
-                    src="~assets/Img/phoenix.png"
-                    alt=""
-                    class="q-ma-xs"
-                    style="border: 4px solid #136066; width: 100%"
-                  />
-                </div>
-                <div class="text-justify q-pa-xs" style="word-break: break-all">
-                  <p class="q-pl-md text-h5 text-weight-bolder">Phoenix</p>
-                  <p class="q-pl-md text-h6">
-                    <strong>League of legends</strong>
-                  </p>
-                  <p class="q-pl-md text-subtitle1" style="color: #136066">
-                    <q-icon name="shutter_speed" /><strong
-                      class="q-pl-xs q-pt-xl"
-                      style="position: relative; top: 3px"
-                    >
-                      3:22</strong
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="col-5 q-pa-xl">
-                <p class="text-center q-pl-lg text-weight-bolder text-h5">
-                  Piano
-                </p>
-                <img
-                  src="~assets/Img/SnowiPiano.png"
-                  alt=""
-                  class="radius q-ml-md"
-                  style="width: 100%"
-                />
-              </div>
-            </div>
-            <q-slider
-              v-model="model"
-              :min="0"
-              :max="10"
-              color="accent"
-              track-size="21px"
-              readonly
-              style="width: 95%"
-            />
-          </q-btn>
-          <q-btn
-            class="bg-white border radius q-mt-xl"
-            style="border: 4px solid #136066"
-            flat
-          >
-            <div class="row">
-              <div class="col">
-                <div>
-                  <div
-                    style="
-                      width: 50%;
-                      position: relative;
-                      z-index: 1;
-                      top: 50px;
-                      background-color: #dcb367;
-                      color: white;
-                      border: 3px solid black;
-                    "
-                  >
-                    Intermedio
-                  </div>
-                  <img
-                    src="~assets/Img/phoenix.png"
-                    alt=""
-                    class="q-ma-xs"
-                    style="border: 4px solid #136066; width: 100%"
-                  />
-                </div>
-                <div class="text-justify q-pa-xs" style="word-break: break-all">
-                  <p class="q-pl-md text-h5 text-weight-bolder">Phoenix</p>
-                  <p class="q-pl-md text-h6">
-                    <strong>League of legends</strong>
-                  </p>
-                  <p class="q-pl-md text-subtitle1" style="color: #136066">
-                    <q-icon name="shutter_speed" /><strong
-                      class="q-pl-xs q-pt-xl"
-                      style="position: relative; top: 3px"
-                    >
-                      3:22</strong
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="col-5 q-pa-xl">
-                <p class="text-center q-pl-lg text-weight-bolder text-h5">
-                  Piano
-                </p>
-                <img
-                  src="~assets/Img/SnowiPiano.png"
-                  alt=""
-                  class="radius q-ml-md"
-                  style="width: 100%"
-                />
-              </div>
-            </div>
-            <q-slider
-              v-model="model"
-              :min="0"
-              :max="10"
-              color="accent"
-              track-size="21px"
-              readonly
-              style="width: 95%"
-            />
-          </q-btn>
         </div>
       </div>
     </div>
   </div>
+  <PreviewGame v-model="previewGame" :song="cancionElegida"></PreviewGame>
 </template>
-<script setup></script>
+<script setup>
+import CardLevel from "components/CardLevel.vue";
+import {onMounted, ref} from "vue"
+import api from "src/boot/httpSingleton";
+import PreviewGame from "components/PreviewGame.vue";
+const api_ = api
+const localStorage = window.localStorage
+const user = JSON.parse(localStorage.getItem("usuario")).datos
+const previewGame = ref(false);
+
+const cancionElegida = ref(null)
+const cancionesGuitar = ref([])
+const cancionesPiano = ref([])
+
+const snowi = ref({})
+const snowiI = ref('')
+const loaded = ref(false)
+
+
+onMounted(conseguirCancionesG)
+function elegida(song){
+  previewGame.value = true
+  cancionElegida.value = song
+}
+
+
+async function conseguirCancionesG() {
+  await fetch(`${api_}/canciones/all`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then((res) => res.json())
+    .then((datos) => {
+      console.log(datos);
+      if (!datos.exito === false) {
+
+        cancionesGuitar.value = []
+        cancionesPiano.value = []
+
+        datos.datos.forEach(objeto => {
+          if(objeto.instrumento === 1){
+            cancionesGuitar.value.push(objeto);
+          }else{
+            cancionesPiano.value.push(objeto);
+          }
+        });
+      }
+    });
+}
+onMounted(conseguirSnowi);
+async function conseguirSnowi() {
+  await fetch(`${api_}//mascotas/esp/${user.snowiSelected}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then((res) => res.json())
+    .then((datos) => {
+      if (!datos.exito === false) {
+        snowi.value = datos.datos
+        loaded.value = true
+        snowiI.value = snowi.value.imgSnowi
+      }
+    });
+}
+
+</script>

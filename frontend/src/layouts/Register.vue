@@ -30,13 +30,10 @@ export default {
     if(user){
 
       window.location.href = "/#/home"
-
     }else{
 
       headerComponent.value = "HeaderS"
-
     }
-
     return {
       headerComponent
     };

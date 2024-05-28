@@ -24,18 +24,44 @@
             "
           >
             <p class="q-pl-md q-pt-md">
-              SnowCoins <strong class="q-pl-md">0</strong
+              Snows <strong class="q-pl-md">{{usuario.datos.snows == null ? "0": usuario.datos.snows}}</strong
               ><strong class="q-pl-sm text-primary">S</strong>
             </p>
           </div>
         </div>
       </div>
       <div class="flex flex-center q-pa-xl q-pt-xl">
-        <CardItemShop v-for="n in 4" :key="n"></CardItemShop>
+        <CardItemShop
+          v-for="n in snowis"
+          :key="n" :nombre="n.snowi" :img="n.imgIcono" :snowi="n"></CardItemShop>
       </div>
     </div>
   </div>
 </template>
 <script setup>
 import CardItemShop from "./CardItemShop.vue";
+import {onMounted, ref} from "vue";
+const localStorage = window.localStorage
+const snowis = ref([])
+
+const usuario = JSON.parse( localStorage.getItem("usuario"))
+
+onMounted(conseguirSnowis)
+
+async function conseguirSnowis(){
+  await fetch("http://127.0.0.1:3000/mascotas/all", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })  .then((res) => res.json())
+    .then((datos) => {
+      snowis.value = []
+      datos.datos.forEach(x =>{
+        if(x.snowi !== "Snowi Original"){
+          snowis.value.push(x)
+        }
+      })
+    })
+}
 </script>

@@ -23,10 +23,10 @@
             class="q-pa-xl bg-black"
           >
             <div class="column text-justify fixed-bottom my-fontAcme">
-              <p class="col text-h4">Nombre de guia</p>
-              <p class="col text-h5 text-primary">Parte X</p>
+              <p class="col text-h4">{{object.nombreGuia}}</p>
+              <p class="col text-h5 text-primary">{{object.parte}}</p>
               <p class="col text-subtitle1 text-secondary">
-                Orientación: General
+                Orientación: {{object.orientacion}}
               </p>
             </div>
           </q-img>
@@ -36,31 +36,19 @@
             <div class="col">
               <div class="column q-pa-md">
                 <p class="col text-h4 my-fontAcme">
-                  ¿Que vas a aprender de esta guia?
+                  ¿Qué vas a aprender de esta guía?
                 </p>
-                <p class="col q-pl-md q-pt-md text-body2">
-                  <strong>- </strong>Vas a aprender bla bla bla bla bla bla.
-                </p>
-                <p class="col q-pl-md text-body2">
-                  <strong>- </strong>Vas a aprender bla bla bla bla bla bla.
-                </p>
-                <p class="col q-pl-md text-body2">
-                  <strong>- </strong>Vas a aprender bla bla bla bla bla bla.
-                </p>
+                <div v-for="(item, index) in object.aprendizaje" :key="index" class="col q-pl-md q-pa-md text-body2">
+                  <strong>- </strong>{{ item }}
+                </div>
               </div>
             </div>
-            <div class="col">
-              <div class="column q-pa-md">
+            <div class="col ">
+              <div class="column q-pa-md q-pt-xl">
                 <p class="col text-h4 my-fontAcme">Antes de comenzar...</p>
-                <p class="col q-pl-md q-pt-md text-body2">
-                  <strong>- </strong>Tienes que saber bla bla bla bla bla bla.
-                </p>
-                <p class="col q-pl-md text-body2">
-                  <strong>- </strong>Tienes que saber bla bla bla bla bla bla.
-                </p>
-                <p class="col q-pl-md text-body2">
-                  <strong>- </strong>Tienes que saber bla bla bla bla bla bla.
-                </p>
+                <div v-for="(item, index) in object.conocimientos" :key="index" class="col q-pl-md q-pa-md text-body2">
+                  <strong>- </strong>{{ item }}
+                </div>
               </div>
             </div>
           </div>
@@ -77,36 +65,13 @@
                 </p>
               </div>
               <div>
-                <div class="q-pa-md">
+                <div class="q-pa-md"  v-for="n in cursos"
+                     :key="n">
                   <q-btn
                     color="black"
                     class="full-width"
-                    label="Lectura de Partituras I"
-                    to="/theory"
-                  />
-                </div>
-                <div class="q-pa-md">
-                  <q-btn
-                    color="black"
-                    class="full-width"
-                    label="Lectura de Partituras II"
-                    to="/theory"
-                  />
-                </div>
-                <div class="q-pa-md">
-                  <q-btn
-                    color="black"
-                    class="full-width"
-                    label="Lectura de Partituras III"
-                    to="/theory"
-                  />
-                </div>
-                <div class="q-pa-md">
-                  <q-btn
-                    color="black"
-                    class="full-width"
-                    label="Lectura de Partituras VI"
-                    to="/theory"
+                    :label="n.nombrePractica"
+                    @click="navigateToTheory(n._id)"
                   />
                 </div>
               </div>
@@ -120,65 +85,44 @@
           <div class="q-pl-xl" style="width: 80%">
             <div class="row">
               <div class="col-5">
-                <p class="text-justify my-fontAcme text-h4">
-                  Titulo de la información
+                <p class="text-center my-fontAcme text-h4">
+                  {{object.teoria[0]}}
                 </p>
-                <p class="my-fontRubik text-body1">
-                  Lorem ipsum dolor sit amet,<strong> consectetur </strong
-                  >adipisicing elit. Incidunt adipisci eius inventore quos omnis
-                  unde illo eligendi maxime nemo veniam magni, ipsa tempore,
-                  labore repellat expedita id dolorum totam itaque.
-                </p>
-                <p class="my-fontRubik text-body1">
-                  Lorem ipsum dolor sit amet,<strong> consectetur </strong
-                  >adipisicing elit. Incidunt adipisci eius inventore quos omnis
-                  unde illo eligendi maxime nemo veniam magni, ipsa tempore,
-                  labore repellat expedita id dolorum totam itaque.
-                </p>
+                <div v-for="(item, index) in object.teoria.slice(1)" :key="index + 1" class="col q-pl-md q-pa-md text-body2">
+                  <p class="my-fontRubik text-body1">{{ item }}</p>
+                </div>
               </div>
               <div class="col flex flex-center">
                 <img
-                  src="src\assets\Img\ChordPiano.jpg"
+                  :src="object.imgTeoria"
                   alt=""
-                  style="width: 80%"
+                  style="width: 90%"
                 />
               </div>
             </div>
             <div class="q-mt-md">
               <div class="column q-pa-md">
                 <p class="col text-h4 my-fontAcme">
-                  Este elemento tiene las caracteristicas de
+                  {{object.cuerpo[0]}}
                 </p>
-                <p class="col q-pl-md q-pt-md my-fontRubik text-body1">
-                  <strong>- </strong>Lorem ipsum dolor sit amet consectetur,
-                  adipisicing elit. Labore consequuntur quo suscipit magni quas
-                  sit esse veritatis dicta quaerat voluptatem, velit facilis
-                  quidem non. Dolorum eligendi voluptatum quae laudantium natus!
-                </p>
-                <p class="col q-pl-md my-fontRubik text-body1">
-                  <strong>- </strong>Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. At minus iusto explicabo sunt doloribus,
-                  iste quo sequi possimus officiis distinctio non, ea
-                  dignissimos repellendus? Obcaecati corporis incidunt nihil
-                  consequuntur facilis?
-                </p>
-                <p class="col q-pl-md my-fontRubik text-body1">
-                  <strong>- </strong>Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit. Libero quam harum adipisci reiciendis atque
-                  vero perspiciatis asperiores maiores similique. Error,
-                  repellendus nulla vitae maiores non placeat consequatur ipsa
-                  debitis. Hic.
-                </p>
+                <div v-for="(item, index) in object.cuerpo.slice(1)" :key="index + 1" class="col q-pl-md q-pa-md text-body2">
+                  <p class="col q-pl-md q-pt-md my-fontRubik text-body1">
+                      {{item}}
+                  </p>
+                </div>
+
               </div>
             </div>
           </div>
           <div class="row q-pt-xl">
-            <p class="col my-fontAcme text-center text-h3 q-pt-md">Do</p>
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACICAMAAABqWSYLAAAACVBMVEX///8AAABNkP4tV+LPAAABR0lEQVR4nO3SQQ6CMABFQfD+h3bhBkhr+kw0mMxfVqgvE7bNzG6w3Zb2wprCzUWPvyy8Pj1/HDa79PL24YVZ0uneWfna+TUJFixYsGDBggULFixYsGDBggULFixYsGDBggULFixYsGDBggULFixYsGDBggULFixYsGDBggULFixYsGDBggULFixYsGDBggULFixYsGDBggULFixYsGDBggULFixYsGDBggULFixYsGDBggULFixYf4K1cultsca1/fArl56+w9H3+MGTw396kwQrJMEKSbBCEqyQBCskwQpJsEISrJAEKyTBCkmwQhKskAQrJMEKSbBCEqyQBCskwQpJsEISrJAEKyTBCkmwQhKskAQrJMEKSbBCEqyQBCskwQpJsEISrJAEKyTBCkmwQhKskAQrJMEKSbBCEqyQtNvShtZm9tM9AUUCViKw9Lh0AAAAAElFTkSuQmCC"
-              alt=""
-              class="col"
-            />
+            <div class="flex flex-center">
+              <img
+                :src="object.imgCuerpo"
+                alt=""
+                class="col"
+                style="max-width: 50%"
+              />
+            </div>
           </div>
         </div>
         <div class="q-pt-xl" style="width: 100%">
@@ -196,22 +140,44 @@
 <script setup>
 import {useRoute} from "vue-router";
 import api from "boot/httpSingleton";
-import {onMounted, ref} from "vue";
+import {onBeforeUnmount, onMounted, ref, watch} from "vue";
 const api_ = api
-import { inject } from 'vue';
+import {useRouter} from "vue-router";
+
+const router = useRouter();
 
 const routes = useRoute();
 const cursoCargado = ref(false);
+const cursos = ref([]);
 const jsonString  = routes.params.id
 const jsonObject = JSON.parse(jsonString)
 const id = jsonObject["$oid"];
-console.log(id)
 
 const object = ref(null)
 window.onload = function(){
   conseguirCurso()
 }
+
+watch(() => router.currentRoute.value.params, () => {
+  onBeforeUnmount(() => {
+    object.value = null
+  });
+  router.go(0);
+});
+
+
+function navigateToTheory(id) {
+  const jsonObject = JSON.parse(id);
+  // Obtiene la ruta actual sin los parámetros de la URL
+  const currentPath = window.location.pathname;
+  // Navega a la misma ruta pero sin el parámetro de ID
+  router.push({ path: currentPath });
+  // Agrega el nuevo parámetro de ID a la URL y recarga la página
+  router.push('/theory/' + encodeURIComponent(JSON.stringify(jsonObject)));
+}
+
 onMounted(conseguirCurso);
+onMounted(conseguirCuros);
 async function conseguirCurso() {
   await fetch(`${api_}/cursos/esp/${id}`, {
     method: "GET",
@@ -225,6 +191,27 @@ async function conseguirCurso() {
       if (!datos.exito === false) {
         object.value = datos.datos
         cursoCargado.value = true
+      }
+    });
+}
+async function conseguirCuros() {
+  await fetch(`${api_}/cursos/all`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then((res) => res.json())
+    .then((datos) => {
+      console.log(datos);
+      if (!datos.exito === false) {
+
+        cursos.value = []
+
+        datos.datos.forEach(objeto => {
+          cursos.value.push(objeto);
+        });
+
       }
     });
 }

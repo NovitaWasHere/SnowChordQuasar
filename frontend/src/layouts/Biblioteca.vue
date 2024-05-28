@@ -26,13 +26,20 @@ export default {
   setup() {
     const localStorage = window.localStorage;
     const user = localStorage.getItem("usuario");
-    const object = ref(JSON.parse(localStorage.getItem("usuario")))
     const headerComponent = ref(user ? 'HeaderSE' : 'HeaderS');
-    let accessData = object.value.datos
 
-    console.log(object.value.datos.admin)
-    if(accessData.admin){
-      headerComponent.value = "HeaderSEA"
+    if(user){
+      const object = ref(JSON.parse(localStorage.getItem("usuario")))
+
+      let accessData = object.value.datos
+
+      if(accessData.admin){
+        headerComponent.value = "HeaderSEA"
+      }else{
+        headerComponent.value = "HeaderSE"
+      }
+    }else{
+      headerComponent.value = "HeaderS"
     }
 
     return {

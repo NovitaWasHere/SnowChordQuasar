@@ -100,7 +100,7 @@
                   <div style="width: 20px" class="bg-red q-mr-md q-mb-md radius">
                     ‎
                   </div>
-                  <p class="text-h5">{{ object.datos.snows !== null ? object.datos.snows : 0 }}</p>
+                  <p class="text-h5">{{ object.datos.dificiles !== null ? object.datos.dificiles : 0 }}</p>
                 </div>
               </div>
             </div>
@@ -118,6 +118,4 @@ const usuario = ref(false);
 const localStorage = window.localStorage;
 const user = localStorage.getItem("usuario");
 const object = ref(JSON.parse(localStorage.getItem("usuario")))
-console.log(object)
-
 </script>

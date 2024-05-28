@@ -41,8 +41,8 @@
           <div class="col-5 q-mt-xl q-pa-md">
             <p class="text-center text-weight-bolder text-h5">{{ instrumento === 1 ? "guitarra" : "piano" }}</p>
             <img
-              v-if="instrumento === 1"
-              src="~assets/Img/SnowiGuitar.png"
+              v-if="instrumento === 1 && imgSnowi"
+              :src="imgSnowi"
               alt="Guitarra"
               class="radius"
               style="width: 100%"
@@ -71,5 +71,5 @@
 </template>
 <script setup>
 const props = defineProps(['id', 'nombre', 'artista', 'instrumento',
-  'tiempo', 'dificultad', 'genero', 'imgCancion'])
+  'tiempo', 'dificultad', 'genero', 'imgCancion', 'imgSnowi'])
 </script>

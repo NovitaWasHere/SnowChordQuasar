@@ -60,7 +60,7 @@ const routes = [
     children: [{ path: "", component: () => import("pages/Theory.vue") }]
   },
   {
-    path: "/play",
+    path: "/play/:id",
     component: () => import("layouts/Play.vue"),
     children: [{ path: "", component: () => import("pages/Play.vue") }],
   },

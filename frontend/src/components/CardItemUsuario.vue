@@ -15,8 +15,8 @@
             </p>
           </div>
           <div class="row col q-pt-xl my-fontAcme flex flex-center">
-            <q-btn flat>
-              <img src="~assets/Img/LogoSnow.png" alt="" class="col-2" />
+            <q-btn flat @click="iconoUser = true">
+              <img :src="object.imgIcono" alt="" class="col-2" />
               <p class="col-6 text-h4 q-pt-xl q-pl-xl">Icono de usuario</p>
               <q-icon class="col-1 q-pt-lg q-pl-xl" name="edit" size="45px"
             /></q-btn>
@@ -46,10 +46,20 @@
   <CardItemConfiguracionPrefs
     v-model="preferencias"
   ></CardItemConfiguracionPrefs>
+  <CardItemConfiguracionUser
+    v-model="iconoUser"
+  ></CardItemConfiguracionUser>
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref, defineProps } from "vue";
 import CardItemConfiguracionPrefs from "./CardItemConfiguracionPrefs.vue";
+import CardItemConfiguracionUser from "./CardItemConfiguracionUser.vue";
 const Usuario = defineModel();
 const preferencias = ref(false);
+const iconoUser = ref(false)
+
+
+const props = defineProps({
+  object: Object
+})
 </script>
