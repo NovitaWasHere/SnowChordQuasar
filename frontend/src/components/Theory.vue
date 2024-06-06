@@ -125,14 +125,6 @@
             </div>
           </div>
         </div>
-        <div class="q-pt-xl" style="width: 100%">
-          <q-btn
-            color="black"
-            class="full-width"
-            label="Siguiente Capitulo"
-            to="/theory"
-          />
-        </div>
       </div>
     </div>
   </div>
