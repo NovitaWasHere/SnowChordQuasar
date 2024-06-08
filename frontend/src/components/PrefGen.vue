@@ -191,7 +191,6 @@ async function terminarRegistro(){
     })
   }).then((res) => res.json())
     .then((datos) => {
-      console.log(datos);
       if (!datos.exito === false)  {
         $q.notify({
           progress: true,

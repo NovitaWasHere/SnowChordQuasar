@@ -16,13 +16,13 @@
             <div class="flex flex-center q-pa-md">
               <q-btn
                 round
+                disable
                 style="
                   width: 70px;
                   height: 70px;
                   background-color: rgb(141, 109, 68);
                 "
                 class="border q-mr-xl"
-                @click="guitarraSel()"
                 id="botonGuitarra"
               >
                 <img
@@ -32,13 +32,13 @@
               /></q-btn>
               <q-btn
                 round
+                disable
                 style="
                   width: 70px;
                   height: 70px;
                   background-color: rgb(255, 255, 255);
                 "
                 class="border q-ml-xl"
-                @click="pianoSel()"
                 id="botonPiano"
               >
                 <img
@@ -58,10 +58,16 @@
             <div class="flex flex-center">
               <div class="row q-pa-xl flex flex-center" style="width: 80%">
                 <div class="q-pa-sm">
-                  <q-btn color="primary" label="Pop" @click="onClick" rounded />
+                  <q-btn
+                    disable
+                    color="primary"
+                    label="Pop"
+                    @click="onClick"
+                    rounded />
                 </div>
                 <div class="q-pa-sm">
                   <q-btn
+                    disable
                     color="primary"
                     label="Jazz"
                     @click="onClick"
@@ -70,6 +76,7 @@
                 </div>
                 <div class="q-pa-sm">
                   <q-btn
+                    disable
                     color="primary"
                     label="Clasica"
                     @click="onClick"
@@ -78,6 +85,7 @@
                 </div>
                 <div class="q-pa-sm">
                   <q-btn
+                    disable
                     color="primary"
                     label="Videojuegos"
                     @click="onClick"
@@ -86,6 +94,7 @@
                 </div>
                 <div class="q-pa-sm">
                   <q-btn
+                    disable
                     color="primary"
                     label="Rock"
                     @click="onClick"
@@ -94,6 +103,7 @@
                 </div>
                 <div class="q-pa-sm">
                   <q-btn
+                    disable
                     color="primary"
                     label="Tecno"
                     @click="onClick"
@@ -112,6 +122,7 @@
             </p>
             <div class="flex flex-center q-pa-md">
               <q-btn
+                disable
                 round
                 style="
                   width: 70px;
@@ -129,6 +140,7 @@
                 />
               </q-btn>
               <q-btn
+                disable
                 round
                 style="
                   width: 70px;
@@ -141,6 +153,7 @@
                 <q-icon name="fa-brands fa-leanpub" color="black" size="2rem"
               /></q-btn>
               <q-btn
+                disable
                 round
                 style="
                   width: 70px;

@@ -15,11 +15,11 @@
             </p>
           </div>
           <div class="row col q-pt-xl my-fontAcme flex flex-center">
-            <q-btn flat @click="iconoUser = true">
-              <img :src="object.imgIcono" alt="" class="col-2" />
-              <p class="col-6 text-h4 q-pt-xl q-pl-xl">Icono de usuario</p>
-              <q-icon class="col-1 q-pt-lg q-pl-xl" name="edit" size="45px"
-            /></q-btn>
+            <div class="row" style="width: 50%">
+              <img :src="object.imgIcono" alt="" class="col" style="width: 5%"/>
+              <p class="col text-h4 q-pt-xl q-pl-xl" >Icono de usuario</p>
+             </div>
+            <q-icon class="col-1 q-pt-lg q-pl-xl" name="edit" size="45px" @click="iconoUser = true" style="cursor: pointer"/>
           </div>
           <div class="q-pt-xl">
             <div class="row col q-pt-xl">

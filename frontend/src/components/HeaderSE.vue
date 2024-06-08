@@ -138,7 +138,6 @@ import CardItemUsuario from "./CardItemUsuario.vue";
 import api from "boot/httpSingleton";
 const api_ = api
 const usuario = ref(false);
-const ConfiguracionUser = ref(false);
 const snowi = ref({})
 
 const localStorage = window.localStorage;
@@ -147,8 +146,8 @@ const object = ref(JSON.parse(localStorage.getItem("usuario")))
 
 function cerrarSesion() {
   localStorage.clear()
-  window.location.reload()
   window.location.href = "/#/";
+  window.location.reload()
 }
 window.onload = function(){
   conseguirSnowi()
@@ -156,7 +155,7 @@ window.onload = function(){
 
 onMounted(conseguirSnowi);
 async function conseguirSnowi() {
-  await fetch(`${api_}//mascotas/esp/${object.value.datos.snowiSelected}`, {
+  await fetch(`${api_}/mascotas/esp/${object.value.datos.snowiSelected}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

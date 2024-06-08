@@ -15,7 +15,7 @@
           </p>
         </div>
       </div>
-      <div class="column bg-white q-pa-xl my-fontAcme border">
+      <div class="column bg-white q-pa-xl my-fontAcme">
         <div class="col text-center text-h5">
           <div class="flex flex-center row q-pt-xl">
             <div class="col-6 text-h5">

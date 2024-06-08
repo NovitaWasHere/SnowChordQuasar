@@ -65,8 +65,8 @@
                                       name="arrow_forward"
                                       style="max-width: 30px"
                                     />
-                                    La metodologia dada desde la aplicacion se
-                                    preocupara exlusivamente por tu progreso
+                                    La metodología dada desde la aplicación se
+                                    preocupará exclusivamente por tu progreso
                                     constante.
                                   </p></strong
                                 >
@@ -129,7 +129,7 @@
                                       name="arrow_forward"
                                       style="max-width: 30px"
                                     />
-                                    Se te daran las herramientas para reforzar lo
+                                    Se te darán las herramientas para reforzar lo
                                     que sepas y se te otorgarán consejos.
                                   </p></strong
                                 >
@@ -151,7 +151,7 @@
                                       name="arrow_forward"
                                       style="max-width: 30px"
                                     />
-                                    La metodologia dada desde la aplicación
+                                    La metodología dada desde la aplicación
                                     intentará que afines tus habilidades y avances
                                     efectivamente.
                                   </p></strong
@@ -174,8 +174,8 @@
                                       name="arrow_forward"
                                       style="max-width: 30px"
                                     />
-                                    Las actividades no tendran ayudas pero serán
-                                    generosas si asi se necesita.
+                                    Las actividades no tendrán ayudas, pero serán
+                                    generosas si así se necesita.
                                   </p></strong
                                 >
                               </q-item-label>

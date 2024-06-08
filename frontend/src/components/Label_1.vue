@@ -14,7 +14,7 @@
             <div>
               <p class="text-justify text-h3">Aprendizaje interactivo</p>
               <p class="text-justify text-h5">
-                La teoria es fundamental en nuestro aprendizaje, pero podemos
+                La teoría es fundamental en nuestro aprendizaje, pero podemos
                 hacerte esa experiencia más agradable con actividades
                 interactivas
               </p>

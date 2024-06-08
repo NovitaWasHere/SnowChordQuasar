@@ -45,7 +45,7 @@
                 </div>
                 <div>
                   <p class="text-justify text-body1">
-                    Con nuestra aplicación totalmente gratis podras aprender y
+                    Con nuestra aplicación totalmente gratis podrás aprender y
                     divertirte al mismo tiempo...
                   </p>
                 </div>
@@ -62,6 +62,7 @@
                         style="border: 1px solid rgb(211, 148, 39); width: 50%"
                       >
                         <q-btn
+                          to="/register"
                           push
                           class="radius"
                           color="secondary"
@@ -87,8 +88,8 @@
                   </div>
                   <div>
                     <p class="text-body1">
-                      Con nuestras divertidas actividades musicales podras
-                      aprender y avanzar de manera rapida con tu aprendizaje
+                      Con nuestras divertidas actividades musicales podrás
+                      aprender y avanzar de manera rápida con tu aprendizaje
                     </p>
                   </div>
                 </div>
@@ -107,9 +108,9 @@
                 </div>
                 <div>
                   <p class="text-body1">
-                    Aunque la aplicacion es muy amigable con los usuarios nuevos
-                    en el mundo de la musica no nos olvidamos de los expertos,
-                    para ellos tenemos retos increibles
+                    Aunque la aplicación es muy amigable con los usuarios nuevos
+                    en el mundo de la música no nos olvidamos de los expertos,
+                    para ellos tenemos retos increíbles
                   </p>
                 </div>
                 <div class="col flex flex-center q-mt-xl">
@@ -121,6 +122,7 @@
                   >
                     <q-btn
                       push
+                      to="/register"
                       class="radius"
                       color="secondary"
                       text-color="black"

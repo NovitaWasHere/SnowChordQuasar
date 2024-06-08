@@ -43,7 +43,7 @@
           <div class="col flex flex-center">
             <div class="flex flex-center">
               <div>
-                <p class="text-h4">Faciles</p>
+                <p class="text-h4">Fáciles</p>
                 <div class="col flex flex-center">
                   <div style="width: 20px" class="bg-green q-mr-md q-mb-md radius">
                     ‎
@@ -95,7 +95,7 @@
           <div class="col flex flex-center">
             <div class="flex flex-center">
               <div>
-                <p class="text-h4"> Dificiles</p>
+                <p class="text-h4"> Difíciles</p>
                 <div class="col flex flex-center">
                   <div style="width: 20px" class="bg-red q-mr-md q-mb-md radius">
                     ‎

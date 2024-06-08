@@ -226,7 +226,6 @@ const api_ = api
 const object = ref(JSON.parse(localStorage.getItem("usuario")))
 let accessData = object.value
 
-console.log(accessData._id.id)
 async function crearEstudiante(){
   document.body.style.overflow = "auto";
 
@@ -238,17 +237,18 @@ async function crearEstudiante(){
     body: JSON.stringify({
       "snows": 0,
       "nivel": dificultadSeleccionada,
-      "inventario": [ ],
+      "inventario": ["664f01cb9d762c4ff6933e15"],
       "perfectos": 0,
       "cancionesC": 0,
       "juegos": 0,
       "faciles": 0,
       "medios": 0,
-      "dificiles": 0
+      "dificiles": 0,
+      "snowiSelected":"664f01cb9d762c4ff6933e15",
+      "reproducidas":[]
     })
   }).then((res) => res.json())
     .then((datos) => {
-      console.log(datos);
       if (!datos.exito === false)  {
         $q.notify({
           progress: true,

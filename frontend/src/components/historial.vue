@@ -25,10 +25,10 @@
         Últimas Canciones
       </p>
     </div>
-    <div class="flex flex-center q-mb-md text-center  text-h3 text-accent">
-      <div v-if="songsArray.length == null">
-        <p>No has jugado ningun nivel</p>
-        <p>¡Prueba uno ahora!</p>
+    <div class="flex flex-center q-mb-md text-center  text-h3 text-black">
+      <div v-if="!permiso">
+        <p class="text-white">No has jugado ningún nivel</p>
+        <p class="text-white">¡Prueba uno ahora!</p>
         <img
          alt="" src="src/assets/Img/SnowiFeliz.png"/>
       <div> <q-btn push label="Canciones" color="white" text-color="black" icon="library_music" to="/songs"  /></div>
@@ -91,6 +91,10 @@ const not = ref(false);
 const api_ = api
 const localStorage = window.localStorage
 const user = JSON.parse(localStorage.getItem("usuario")).datos
+const permiso = ref(true)
+if(user.reproducidas.length === 2){
+  permiso.value = false
+}
 
 const songsArray = user.reproducidas
   .replace(/[\[\]]/g, '')  // Eliminar los corchetes
@@ -98,7 +102,6 @@ const songsArray = user.reproducidas
   .replace(/'\)/g, '')
   .split(', ')  // Separar por comas y espacios
   .map(item => item.trim());  // Quitar espacios adicionales si los hubiera
-
 function elegida(song){
   previewGame.value = true
   cancionElegida.value = song

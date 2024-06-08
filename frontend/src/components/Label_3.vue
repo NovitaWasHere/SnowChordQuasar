@@ -13,8 +13,8 @@
                   Descubre el mundo de la musica con tus canciones favoritas
                 </p>
                 <p class="text-h5">
-                  SnowChord esta hecha para que puedas practicar con las
-                  canciones que tu quieras, aunque de vez en cuando te ira dando
+                  SnowChord está hecha para que puedas practicar con las
+                  canciones que tú quieras, aunque de vez en cuando te ira dando
                   recomendaciones
                 </p>
               </div>
@@ -60,8 +60,8 @@
       <div style="width: 70%; border: 3px solid white" class="col bg-primary">
         <div class="q-pa-md">
           <p class="text-center my-fontAcme text-h3 " style="color: white">
-            Disfruta de video tutoriales en los mini-cursos oficiales que
-            ponemos a tu disposicion
+            Disfruta de videotutoriales en los mini-cursos oficiales que
+            ponemos a tu disposición
           </p>
         </div>
         <div class="q-pa-md q-ma-sm">
@@ -75,7 +75,7 @@
     <br /><br />
     <div class="my-fontAcme row q-pa-md" style="color: white">
       <div style="width: 100%">
-        <h2 class="text-center text-white">Ahora estas listo para empezar?</h2>
+        <h2 class="text-center text-white">¿Ahora estás listo para empezar?</h2>
         <div class="col flex justify-center centers q-pb-xl">
           <q-btn-group
             push
@@ -85,6 +85,7 @@
           >
             <q-btn
               push
+              to="/register"
               class="radius"
               color="secondary"
               text-color="black"
